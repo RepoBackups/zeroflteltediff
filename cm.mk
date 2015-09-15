@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/zerofltespr/lt03wifiue-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/zeroltetmo/lt03wifiue-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/zerofltespr/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/zeroltetmo/overlay
 
-LOCAL_PATH := device/samsung/zerofltespr
+LOCAL_PATH := device/samsung/zeroltetmo
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernAl
 else
@@ -20,7 +20,7 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := cm_zerofltespr
-PRODUCT_DEVICE := zerofltespr
+PRODUCT_NAME := cm_zeroltetmo
+PRODUCT_DEVICE := zeroltetmo
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := zerofltespr
+PRODUCT_MODEL := zeroltetmo
